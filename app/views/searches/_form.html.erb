@@ -1,0 +1,33 @@
+<%= form_for(@search) do |f| %>
+  <% if @search.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@search.errors.count, "error") %> prohibited this search from being saved:</h2>
+
+      <ul>
+      <% @search.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_path %><br>
+    <%= f.text_field :image_path %>
+  </div>
+  <div class="field">
+    <%= f.label :date_lost %><br>
+    <%= f.date_select :date_lost %>
+  </div>
+  <div class="field">
+    <%= f.label :num_results %><br>
+    <%= f.number_field :num_results %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Search for Dog" %>
+  </div>
+<% end %>

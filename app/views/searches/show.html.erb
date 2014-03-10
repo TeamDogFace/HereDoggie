@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image path:</strong>
+  <%= @search.image_path %>
+</p>
+
+<p>
+  <strong>Date lost:</strong>
+  <%= @search.date_lost %>
+</p>
+
+<p>
+  <strong>Num results:</strong>
+  <%= @search.num_results %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @search.email %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @search.finished %>
+</p>
+
+<%= link_to 'Edit', edit_search_path(@search) %> |
+<%= link_to 'Back', searches_path %>

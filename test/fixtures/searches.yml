@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_path: MyString
+  date_lost: 2014-03-04 15:41:36
+  num_results: 1
+  email: MyString
+  finished: 
+
+two:
+  image_path: MyString
+  date_lost: 2014-03-04 15:41:36
+  num_results: 1
+  email: MyString
+  finished: 
