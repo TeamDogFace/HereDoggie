@@ -28,8 +28,11 @@ class SearchesController < ApplicationController
 
     respond_to do |format|
       if @search.save
-        format.html { redirect_to @search, notice: 'Search was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @search }
+        # Split up URLs and create entries
+        if create_facebook_urls
+          format.html { redirect_to @search, notice: 'Your search was successfully queued.' }
+          format.json { render action: 'show', status: :created, location: @search }
+        end
       else
         format.html { render action: 'new' }
         format.json { render json: @search.errors, status: :unprocessable_entity }
@@ -69,6 +72,16 @@ class SearchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def search_params
-      params.require(:search).permit(:image_path, :date_lost, :num_results, :email, :finished)
+      params.require(:search).permit(:image_path, :date_lost, :num_results, :email, :facebook_url_string)
+    end
+
+    # Create FacebookUrl entries with search_ids equal to the current @search.id
+    def create_facebook_urls
+      success = true
+      @search.urls.each do |url|
+        fb_url = FacebookUrl.new({ search_id: @search.id, url: url })
+        success &= fb_url.save
+      end
+      success
     end
 end

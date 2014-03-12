@@ -27,6 +27,10 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+  <div class="field">
+    <%= f.label "Facebook URLs" %><br>
+    <%= f.text_area :facebook_url_string, size: "40x6" %>
+  </div>
   <div class="actions">
     <%= f.submit "Search for Dog" %>
   </div>

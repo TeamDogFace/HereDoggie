@@ -21,9 +21,34 @@
 </p>
 
 <p>
-  <strong>Finished:</strong>
-  <%= @search.finished %>
+  <strong>Status:</strong>
+  <%= @search.status %>
 </p>
 
-<%= link_to 'Edit', edit_search_path(@search) %> |
-<%= link_to 'Back', searches_path %>
+<p>
+  <strong>Predictions:</strong>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Search ID</th>
+      <th>Dog ID</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @search.predictions.each do |prediction| %>
+      <tr>
+        <td><%= prediction.id %></td>
+        <td><%= prediction.search_id %></td>
+        <td><%= prediction.dog_id %></td>
+        <td><%= prediction.url %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Check Status', search_path(@search) %> |
+<%= link_to 'New Search', new_search_path %>
