@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image path:</strong>
-  <%= @search.image_path %>
+<!--   <strong>Image path:</strong> -->
+  <%= image_tag @search.photo.url(:thumb) %>
 </p>
 
 <p>
@@ -25,30 +25,33 @@
   <%= @search.status %>
 </p>
 
-<p>
-  <strong>Predictions:</strong>
-</p>
+<!-- It would be cool to splash in a little AJAX to check and bring back results -->
+<% if @search.predictions.any? %>
+  <p>
+    <strong>Predictions:</strong>
+  </p>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Search ID</th>
-      <th>Dog ID</th>
-      <th>URL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @search.predictions.each do |prediction| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= prediction.id %></td>
-        <td><%= prediction.search_id %></td>
-        <td><%= prediction.dog_id %></td>
-        <td><%= prediction.url %></td>
+        <th>ID</th>
+        <th>Search ID</th>
+        <th>Dog ID</th>
+        <th>URL</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @search.predictions.each do |prediction| %>
+        <tr>
+          <td><%= prediction.id %></td>
+          <td><%= prediction.search_id %></td>
+          <td><%= prediction.dog_id %></td>
+          <td><%= prediction.url %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
 
 <%= link_to 'Check Status', search_path(@search) %> |
 <%= link_to 'New Search', new_search_path %>

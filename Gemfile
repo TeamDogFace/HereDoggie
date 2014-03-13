@@ -22,6 +22,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use the Thin web server instead of WEBrick
 # gem 'thin'
 
+# Use paperclip for uploading images
+gem 'paperclip', '~> 4.1'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

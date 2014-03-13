@@ -72,7 +72,7 @@ class SearchesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def search_params
-      params.require(:search).permit(:image_path, :date_lost, :num_results, :email, :facebook_url_string)
+      params.require(:search).permit(:date_lost, :num_results, :email, :facebook_url_string, :photo)
     end
 
     # Create FacebookUrl entries with search_ids equal to the current @search.id

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140312035001) do
+ActiveRecord::Schema.define(version: 20140313182601) do
 
   create_table "facebook_urls", force: true do |t|
     t.string   "url"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20140312035001) do
   add_index "predictions", ["search_id"], name: "index_predictions_on_search_id"
 
   create_table "searches", force: true do |t|
-    t.string   "image_path"
     t.datetime "date_lost"
     t.integer  "num_results"
     t.string   "email"
@@ -41,6 +40,10 @@ ActiveRecord::Schema.define(version: 20140312035001) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "facebook_url_string"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
 end
