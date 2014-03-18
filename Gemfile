@@ -25,6 +25,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use paperclip for uploading images
 gem 'paperclip', '~> 4.1'
 
+# Let's make everything look nice with Twitter Bootstrap
+gem 'bootstrap-sass', '2.3.2.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
