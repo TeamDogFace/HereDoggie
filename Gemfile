@@ -26,7 +26,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'paperclip', '~> 4.1'
 
 # Let's make everything look nice with Twitter Bootstrap
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', '3.1.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
