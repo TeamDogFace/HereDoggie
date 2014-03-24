@@ -88,6 +88,6 @@ class SearchesController < ApplicationController
     end
 
     def parse_date
-      search_params[:date_lost] = DateTime.strptime(search_params[:date_lost], '%m/%d/%Y')
+      search_params[:date_lost] = Date.strptime(search_params[:date_lost], '%m/%d/%Y')
     end
 end
