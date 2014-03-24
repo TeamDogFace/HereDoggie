@@ -16,7 +16,8 @@ p, ol, ul, td {
 }
 
 #img-preview{
-	max-width: 261px;
+	max-width: 100%;
+	display: block;
 }
 
 .invis{
