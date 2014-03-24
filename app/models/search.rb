@@ -6,6 +6,7 @@ class Search < ActiveRecord::Base
 	validates :date_lost, :num_results, :email, presence: true
 	validates :num_results, numericality: { greater_than: 0, less_than_or_equal_to: 1000 }
 	validates_format_of :email, with: /@/
+	validates_attachment_presence :photo
 	validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
 
 	def predictions
