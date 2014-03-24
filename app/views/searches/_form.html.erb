@@ -1,3 +1,5 @@
+<div class="row">
+
 <%= form_for(@search, html: { multipart: true }) do |f| %>
   <% if @search.errors.any? %>
     <div id="error_explanation">
@@ -11,26 +13,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.file_field :photo %>
+  <div class="col-md-4 step">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Step 1</h3>
+      </div>
+      <div class="panel-body">
+        <p>First, we need a photo of your dog. Make sure the photo contains your dog's face without any obstructions. Keep in mind that photos containing multiple dog faces may affect your search results.</p>
+        <div class="field">
+          <%= f.file_field :photo, title: "Upload a dog photo...", class: "btn btn-primary", id: "imgInp" %>
+        </div>
+        <div class="preview">
+          <img id="img-preview" src="#" alt="uploaded dog image" style="opacity: 0;" />
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :date_lost %><br>
-    <%= f.date_select :date_lost %>
+
+  <div class="col-md-4 step">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Step 2</h3>
+      </div>
+      <div class="panel-body">
+        
+        <div class="field input-group">
+          <%= f.label :date_lost %><br>
+          <%= f.text_field :date_lost, class: "datepicker form-control" %>
+          <%= f.label :num_results %><br>
+          <%= f.number_field :num_results, class: "form-control" %>
+          <%= f.label "Facebook URLs" %><br>
+          <%= f.text_area :facebook_url_string, size: "40x6", class: "form-control" %>
+        </div>
+      </div>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :num_results %><br>
-    <%= f.number_field :num_results %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label "Facebook URLs" %><br>
-    <%= f.text_area :facebook_url_string, size: "40x6" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Search for Dog" %>
+
+  <div class="col-md-4 step">
+      <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Step 3</h3>
+      </div>
+      <div class="panel-body">
+        <div class="field input-group">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, class: "form-control" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Search for Dog", class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
+</div>
