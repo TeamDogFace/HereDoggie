@@ -24,8 +24,6 @@ class SearchesController < ApplicationController
   # POST /searches
   # POST /searches.json
   def create
-    parse_date unless search_params[:date_lost].empty?
-
     @search = Search.new(search_params)
 
     respond_to do |format|
@@ -85,9 +83,5 @@ class SearchesController < ApplicationController
         success &= fb_url.save
       end
       success
-    end
-
-    def parse_date
-      search_params[:date_lost] = Date.strptime(search_params[:date_lost], '%m/%d/%Y')
     end
 end
