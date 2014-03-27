@@ -36,15 +36,21 @@
         <h3 class="panel-title">Step 2</h3>
       </div>
       <div class="panel-body">
-        
-        <div class="field input-group">
-          <%= f.label :date_lost %><br>
-          <%= f.text_field :date_lost, class: "datepicker form-control" %>
-          <%= f.label :num_results %><br>
-          <%= f.number_field :num_results, class: "form-control" %>
-          <%= f.label "Facebook URLs" %><br>
-          <%= f.text_area :facebook_url_string, size: "40x6", class: "form-control" %>
+        <div class="field">
+          <%= f.text_field :date_lost, class: "datepicker form-control", placeholder: "Date lost" %>
         </div>
+        <div class="field">
+          <%= f.number_field :num_results, class: "form-control", placeholder: "Number of results" %>
+        </div>
+        
+        <div id="fb-fields">
+          <div class="field input-group" id="fb_1">
+            <input type="text" class="form-control" id="search_facebook_url_string_1" name="search[facebook_url_string_1]" placeholder="Facebook URL" />
+            <span class="input-group-btn"><button class="btn btn-success btn-add">+</button></span>
+          </div>
+        </div>
+          <%= f.text_field :facebook_url_string, class: "form-control" %>
+        
       </div>
       </div>
   </div>
@@ -55,9 +61,8 @@
         <h3 class="panel-title">Step 3</h3>
       </div>
       <div class="panel-body">
-        <div class="field input-group">
-          <%= f.label :email %><br>
-          <%= f.text_field :email, class: "form-control" %>
+        <div class="field">
+          <%= f.text_field :email, class: "form-control", placeholder: "Email"%>
         </div>
         <div class="actions">
           <%= f.submit "Search for Dog", class: "btn btn-primary" %>

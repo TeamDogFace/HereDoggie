@@ -11,9 +11,7 @@ p, ol, ul, td {
 	width: 30px;
 }
 
-.step{
-	height: 378px;
-}
+.step{}
 
 #img-preview{
 	max-width: 100%;
