@@ -20,3 +20,6 @@
 
 # Mac Desktop Services Store file
 .DS_Store
+
+# Pictures stored from Paperclip
+/public/system/searches
