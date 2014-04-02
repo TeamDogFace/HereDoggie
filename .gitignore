@@ -18,3 +18,5 @@
 # Ignore vagrant directory
 /.vagrant
 
+# Mac Desktop Services Store file
+.DS_Store
