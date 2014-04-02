@@ -1,7 +1,10 @@
 class Search < ActiveRecord::Base
 	has_many :predictions
 	has_many :facebook_urls
-	has_attached_file :photo, styles: { normal: "500x500>", thumb: "100x100>"}
+	has_attached_file :photo,
+		styles: { normal: "500x500>", thumb: "100x100>"},
+		path: "public/system/:class/:id/:style/:filename",
+		url: "/system/:class/:id/:style/:filename"
 
 	validates :date_lost, :num_results, :email, presence: true
 	validates :num_results, numericality: { greater_than: 0, less_than_or_equal_to: 1000 }
