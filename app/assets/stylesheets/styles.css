@@ -7,6 +7,10 @@ p, ol, ul, td {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.center-block{
+	float: none;
+}
+
 .logo {
 	width: 30px;
 }
@@ -20,4 +24,50 @@ p, ol, ul, td {
 
 .invis{
 	opacity: 0;
+}
+
+.fade-in{
+	opacity: 1;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+.jumbotron{
+	background-color: rgba(0,0,0,0);
+	color: #eee;
+	text-align: center;
+}
+
+.navbar{
+	background-color: rgba(248, 248, 248, 0.6);
+	border-color: rgba(231, 231, 231, 0.6);
+}
+
+.panel{
+	background-color: rgba(248, 248, 248, 0.5)!important;
+}
+.panel-default{
+	border-color: rgba(221, 221, 221, 0.5) !important;
+}
+.panel-heading{
+	background-color: rgba(245, 245, 245, 0.5)!important;
+	border-color: rgba(221, 221, 221, 0.5)!important;
+}
+
+.form-control{
+	background-color: rgba(245, 245, 245, 0.5)!important;
+}
+.form-control:focus{
+	background-color: rgba(245, 245, 245, 1)!important;
+}
+
+#pane1, #pane2, #pane3{
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-ms-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
 }

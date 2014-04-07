@@ -53,4 +53,12 @@ http://jsfiddle.net/jaredwilli/tZPg4/4/
     		i--;
     	}
 	});
+
+	$('.btn-get-started').click(function(e){
+		e.preventDefault();
+		//$('.pane1').closest('.step').removeClass('hidden');
+		//$('.pane1').removeClass('invis');
+		//$('.pane1').removeClass('invis');
+		$('#pane1').closest('.step').fadeToggle();
+	});
 });
