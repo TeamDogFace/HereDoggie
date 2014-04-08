@@ -30,6 +30,8 @@ class SearchesController < ApplicationController
       if @search.save
         # Split up URLs and create entries
         if create_facebook_urls
+          # Start async job
+          FacialRecognitionWorker.perform_async(@search.id)
           format.html { redirect_to @search, notice: 'Your search was successfully queued.' }
           format.json { render action: 'show', status: :created, location: @search }
         end
