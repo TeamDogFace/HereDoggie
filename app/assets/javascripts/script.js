@@ -33,7 +33,7 @@ http://jsfiddle.net/jaredwilli/tZPg4/4/
 		//var value = $('#search_facebook_url_string_'+(i-1)).val();
 		//alert("value (in "+(i-1)+"): " + value);
 		//alert("value: "+value+" i: " +i);
-		$('<div class="field input-group" id="fb_'+i+'"><input type="text" class="form-control" id="search_facebook_url_string_'+i+'" name="search[facebook_url_string_'+i+']" placeholder="Facebook URL" /><span class="input-group-btn"><button type="button" class="btn btn-success btn-add">+</button></span></div>').appendTo(fb_div);
+		$('<div class="field input-group" id="fb_'+i+'"><input type="text" class="form-control fb_url" id="search_facebook_url_string_'+i+'" name="search[facebook_url_string_'+i+']" placeholder="Facebook URL" /><span class="input-group-btn"><button type="button" class="btn btn-success btn-add">+</button></span></div>').appendTo(fb_div);
     	//$('#search_facebook_url_string_'+i).val(value);
     	//$('#search_facebook_url_string_'+(i-1)).val('');
     	$(this).text('-');
@@ -61,4 +61,14 @@ http://jsfiddle.net/jaredwilli/tZPg4/4/
 		//$('.pane1').removeClass('invis');
 		$('#pane1').closest('.step').fadeToggle();
 	});
+
+    $('.row').submit(function() {
+        var str = '';
+        $('.fb_url').each(function() {
+            str += $(this).val();
+            str += ' ';
+        });
+        $('#facebook_url_string').val(str);
+        return true;
+    });
 });
