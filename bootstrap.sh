@@ -17,3 +17,5 @@ echo "We want a Rails version >4.0"
 echo `rails -v`
 echo "Installing ImageMagick"
 apt-get install -y imagemagick > /dev/null 2>&1
+echo "Installing redis server"
+apt-get install -y redis-server > /dev/null 2>&1

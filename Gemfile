@@ -19,11 +19,15 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# Use the Thin web server instead of WEBrick
-# gem 'thin'
-
 # Use paperclip for uploading images
 gem 'paperclip', '~> 4.1'
+
+# Add in Sidekiq for async job queueing
+gem 'sidekiq'
+
+# We need sinatra and thin gems for sidekiq monitoring
+gem 'sinatra', require: false
+gem 'slim'
 
 # Let's make everything look nice with Twitter Bootstrap
 gem 'bootstrap-sass', '3.1.1.0'
