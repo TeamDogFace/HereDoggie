@@ -21,5 +21,18 @@ module HereDoggie
     # config.i18n.default_locale = :de
     config.autoload_paths += %w(#{config.root}/app/workers)
     config.assets.precompile += %w(*.png, *.jpg, *.jpeg, *.gif)
+
+    # ActionMailer settings for Mandrill
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        address: "smtp.mandrillapp.com",
+        port: 587,
+        domain: "psu.edu",
+        authentication: "plain",
+        user_name: ENV["MAILER_USERNAME"],
+        password: ENV["MAILER_PASSWORD"],
+        enable_starttls_auto: true
+    }
+    
   end
 end

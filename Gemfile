@@ -29,6 +29,9 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
 
+# Use figaro to set credentials as environment variables 
+gem 'figaro'
+
 # Let's make everything look nice with Twitter Bootstrap
 gem 'bootstrap-sass', '3.1.1.0'
 

@@ -26,4 +26,9 @@ HereDoggie::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  
+  # Change this to true for demos
+  config.action_mailer.perform_deliveries = false
+
 end

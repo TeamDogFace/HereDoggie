@@ -23,3 +23,6 @@
 
 # Pictures stored from Paperclip
 /public/system/searches
+
+# Ignore application configuration
+/config/application.yml
