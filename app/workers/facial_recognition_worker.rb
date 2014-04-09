@@ -1,5 +1,6 @@
 class FacialRecognitionWorker
   include Sidekiq::Worker
+  sidekiq_options retry: false
 
   def perform(search_id)
     # Run python script for facial recognition
