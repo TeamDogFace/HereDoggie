@@ -1,16 +1,61 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-<!--   <strong>Image path:</strong> -->
+
+<div class="container results" data-id="<%= @search.id %>">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="panel panel-default">
+        <%= image_tag @search.photo.url(:thumb), class: "img-responsive" %>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="panel panel-default">
+      <!-- Results -->
+      <div class="panel-heading">
+        <h3 class="panel-title">Results</h3>
+      </div>
+
+      <% @search.predictions.each do |prediction| %>
+        <div class="media">
+          <a class="pull-left" href="#">
+            <%= image_tag("doge.png", class: "media-object logo") %>
+            <!-- <img class="media-object" src="doge.png" alt="Doge"> -->
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">Dog ID: <%= prediction.dog_id %></h4>
+            Search ID: <%= prediction.search_id %> </br>
+            ID: <%= prediction.id %> </br>
+            <a href="http://<%= prediction.url %>" target="_blank">Source</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- <p>
+
   <%= image_tag @search.photo.url(:thumb) %>
 </p>
 
-<p>
+<p class="panel-title">
   <strong>Date lost:</strong>
   <%= @search.date_lost %>
 </p>
 
-<p>
+<p class="panel-title">
   <strong>Num results:</strong>
   <%= @search.num_results %>
 </p>
@@ -25,13 +70,13 @@
   <%= @search.status %>
 </p>
 
-<!-- It would be cool to splash in a little AJAX to check and bring back results -->
+<!-- It would be cool to splash in a little AJAX to check and bring back results
 <% if @search.predictions.any? %>
   <p>
     <strong>Predictions:</strong>
   </p>
 
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th>ID</th>
@@ -51,7 +96,7 @@
       <% end %>
     </tbody>
   </table>
-<% end %>
+<% end %> -->
 
 <%= link_to 'Check Status', search_path(@search) %> |
 <%= link_to 'New Search', new_search_path %>

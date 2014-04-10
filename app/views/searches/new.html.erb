@@ -3,4 +3,10 @@
 	<h3>You're only 3 steps away from finding your canine companion.</h3><br><br>
 	<button type="button" class="btn btn-primary btn-get-started">Get Started</button>
 </div>
+
 <%= render 'form' %>
+
+<script>
+  var path = "<%= asset_path('bg.jpg') %>";
+  $.backstretch(path);
+</script>
