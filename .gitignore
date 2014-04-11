@@ -26,3 +26,6 @@
 
 # Ignore application configuration
 /config/application.yml
+
+# If the DogFacialRecognition is in vendor don't commit it
+/vendor/DogFaceRecognizer
