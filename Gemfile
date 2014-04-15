@@ -29,11 +29,17 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
 
-# Use figaro to set credentials as environment variables 
+# Use figaro to set credentials as environment variables
 gem 'figaro'
 
 # Let's make everything look nice with Twitter Bootstrap
 gem 'bootstrap-sass', '3.1.1.0'
+
+# For Production deployment
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-rvm', github: "capistrano/rvm"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
