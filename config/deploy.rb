@@ -4,7 +4,7 @@ lock '3.1.0'
 set :application, 'HereDoggie'
 set :repo_url, 'git@github.com:TeamDogFace/HereDoggie.git'
 
-set deploy_to, 'home/deploy/HereDoggie'
+set deply_to, 'home/deploy/HereDoggie'
 
 set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
