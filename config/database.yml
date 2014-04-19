@@ -18,8 +18,18 @@ test:
   pool: 5
   timeout: 5000
 
+# production:
+#   adapter: sqlite3
+#   database: db/production.sqlite3
+#   pool: 5
+#   timeout: 5000
+
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql
+  encoding: utf8
+  database: here_doggie
+  username: you
+  password: wish
+  host: localhost
+  port: 3306
+  pool: 10
