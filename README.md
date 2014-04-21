@@ -3,7 +3,7 @@ Doge Finder
 
 Find your canine companion in 3 easy steps. 
 
-This web application will run facial detection and then local binary pattern histogram facial recognition on all possible dogs based on the date lost.
+This web application will run facial detection and then [local binary pattern histogram][1] facial recognition on all possible dogs based on the date lost.
 
 Requirements
 ------------
@@ -24,7 +24,9 @@ The Production is set to use MySQL and will need proper credentials. To create t
 Contributing
 ------------
 
-We'd love for you to contribute but currently this is our senior design project and would probably in some voilation stated by Penn State.
+We'd love for you to contribute but currently this is our senior design project and letting others contribute would probably be in some violation of a rule set by Penn State.
+
+[1]: http://docs.opencv.org/modules/contrib/doc/facerec/facerec_tutorial.html#local-binary-patterns-histograms
 
 <!-- == README
 
