@@ -21,6 +21,10 @@ Database
 
 The Production is set to use MySQL and will need proper credentials. To create the database run `create database here_doggie`
 
+Screenshot
+----------
+![Screenshot](./public/Screenshot.png)
+
 Contributing
 ------------
 
