@@ -13,11 +13,12 @@
     </div>
   <% end %>
 
-  <div class="col-md-4 step">
-    <div class="panel panel-default" id="pane1">
+<div id="steps" class="panel-group steps col-md-8 col-md-offset-2">
+    <div class="panel panel-default step" id="pane1">
       <div class="panel-heading">
         <h3 class="panel-title">Step 1</h3>
       </div>
+      <div id="body1" class="panel-collapse collapse in">
       <div class="panel-body">
         <p>First, we need a photo of your dog. Make sure the photo contains your dog's face without any obstructions. Keep in mind that photos containing multiple dog faces may affect your search results.</p>
         <div class="field">
@@ -27,14 +28,15 @@
           <img id="img-preview" src="#" alt="uploaded dog image" style="opacity: 0;" />
         </div>
       </div>
+      </div>
     </div>
-  </div>
 
-  <div class="col-md-4 step">
-    <div class="panel panel-default" id="pane2">
+  
+    <div class="panel panel-default step" id="pane2">
       <div class="panel-heading">
         <h3 class="panel-title">Step 2</h3>
       </div>
+      <div id="body2" class="panel-collapse collapse">
       <div class="panel-body">
         <div class="field">
           <%= f.text_field :date_lost, class: "datepicker form-control", placeholder: "Date lost" %>
@@ -53,15 +55,16 @@
           </div>
         </div>
           <!--<%= f.text_field :facebook_url_string, class: "form-control" %>-->
+          <button class="btn btn-primary" id="crawl">Next</button>
       </div>
-      </div>
-  </div>
-
-  <div class="col-md-4 step">
-      <div class="panel panel-default" id="pane3">
+    </div>
+    </div>
+  
+    <div class="panel panel-default step" id="pane3">
       <div class="panel-heading">
         <h3 class="panel-title">Step 3</h3>
       </div>
+      <div id="body3" class="panel-collapse collapse">
       <div class="panel-body">
         <div class="field">
           <%= f.text_field :email, class: "form-control", placeholder: "Email"%>
@@ -71,6 +74,7 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
+</div>
 <% end %>
 </div>
