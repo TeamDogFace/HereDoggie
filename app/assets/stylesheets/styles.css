@@ -19,17 +19,18 @@ p, ol, ul, td {
 	display: none;
 }
 
-.bx-wrapper{
-	display: none;
-}
-
 .step{
 	
 }
 
+.preview{
+
+}
+
 #img-preview{
+	float: none;
+	margin: 0 auto;
 	max-width: 100%;
-	display: block;
 }
 
 .invis{

@@ -16,7 +16,7 @@
 <div id="steps" class="panel-group steps col-md-8 col-md-offset-2">
     <div class="panel panel-default step" id="pane1">
       <div class="panel-heading">
-        <h3 class="panel-title">Step 1</h3>
+        <h3 class="panel-title" id="title1">Step 1</h3>
       </div>
       <div id="body1" class="panel-collapse collapse in">
       <div class="panel-body">
@@ -25,7 +25,7 @@
           <%= f.file_field :photo, title: "Upload a dog photo...", class: "btn btn-primary", id: "imgInp" %>
         </div>
         <div class="preview">
-          <img id="img-preview" src="#" alt="uploaded dog image" style="opacity: 0;" />
+          <img id="img-preview" class="img-responsive img-rounded" src="#" alt="uploaded dog image" style="opacity: 0;" />
         </div>
       </div>
       </div>
@@ -34,17 +34,19 @@
   
     <div class="panel panel-default step" id="pane2">
       <div class="panel-heading">
-        <h3 class="panel-title">Step 2</h3>
+        <h3 class="panel-title" id="title2">Step 2</h3>
       </div>
       <div id="body2" class="panel-collapse collapse">
       <div class="panel-body">
+        <p>Now we need some information about your search. When did you lose your dog? </p>
         <div class="field">
           <%= f.text_field :date_lost, class: "datepicker form-control", placeholder: "Date lost" %>
         </div>
+        <p>How many search results would you like? Remember, a large number (hundreds) of search results may increase your search time.</p>
         <div class="field">
           <%= f.number_field :num_results, class: "form-control", placeholder: "Number of results" %>
         </div>
-        
+        <p>This section is for searching Facebook. If you know of any Facebook groups that post photos of lost dogs, you can add them here. Just paste the URL of the group's page. For example, just paste 'https://www.facebook.com/erieanimalnetwork' into a box to search Erie Animal Network. Click the '+' button to add more.</p>
         <div id="fb-fields">
           <div class="field input-group" id="fb_1">
             <input type="text" class="form-control fb_url" id="search_facebook_url_string_1" name="search[facebook_url_string_1]" placeholder="Facebook URL" />
@@ -62,10 +64,11 @@
   
     <div class="panel panel-default step" id="pane3">
       <div class="panel-heading">
-        <h3 class="panel-title">Step 3</h3>
+        <h3 class="panel-title" id="title3">Step 3</h3>
       </div>
       <div id="body3" class="panel-collapse collapse">
       <div class="panel-body">
+        <p>Congratulations! You are at the last step. All we need now is for you to provide us with your email address so that we can let you know when your results are in.</p>
         <div class="field">
           <%= f.text_field :email, class: "form-control", placeholder: "Email"%>
         </div>
