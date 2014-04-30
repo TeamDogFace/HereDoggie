@@ -48,3 +48,7 @@ p, ol, ul, td {
 	background-color: rgba(248, 248, 248, 0.6);
 	border-color: rgba(231, 231, 231, 0.6);
 }
+
+a.btn:visited{
+	color: #fff
+}
