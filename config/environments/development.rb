@@ -29,6 +29,6 @@ HereDoggie::Application.configure do
 
   
   # Change this to true for demos
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.perform_deliveries = true
 
 end
