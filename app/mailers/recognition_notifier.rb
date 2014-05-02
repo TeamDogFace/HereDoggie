@@ -4,4 +4,8 @@ class RecognitionNotifier < ActionMailer::Base
   def complete(email)
     mail to: email, subject: 'Finished Dog Search'
   end
+
+  def error(email)
+    mail to: email, subject: 'Error with Dog Search'
+  end
 end

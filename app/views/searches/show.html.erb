@@ -36,7 +36,8 @@
             <h4 class="media-heading">Dog ID: <%= prediction.dog_id %></h4>
             Search ID: <%= prediction.search_id %> </br>
             ID: <%= prediction.id %> </br>
-            <a href="http://<%= prediction.url %>" target="_blank">Source</a>
+            Description: <%= prediction.description %> </br>
+            <a href="http://<%= prediction.url.gsub('http://', '') %>" target="_blank">Source</a>
           </div>
         </div>
       <% end %>
@@ -104,5 +105,3 @@
     </tbody>
   </table>
 <% end %> -->
-
-

@@ -16,7 +16,7 @@ class Search < ActiveRecord::Base
 
 	def recognize
 		# Run async
-		FacialRecognitionWorker.perform_async(self.email)
+		FacialRecognitionWorker.perform_async(self.id)
 	end
 
 	def predictions
