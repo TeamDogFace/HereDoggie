@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140313182601) do
+ActiveRecord::Schema.define(version: 20140502143712) do
 
   create_table "facebook_urls", force: true do |t|
     t.string   "url"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20140313182601) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "url"
+    t.text     "description"
+    t.string   "photo_file_name"
   end
 
   add_index "predictions", ["search_id"], name: "index_predictions_on_search_id"
