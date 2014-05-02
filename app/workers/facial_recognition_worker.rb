@@ -2,8 +2,7 @@ class FacialRecognitionWorker
   include Sidekiq::Worker
   sidekiq_options retry: false
 
-  def perform(search_id)
-    email = Search.find(search_id).email
+  def perform(search_id, email)
   	begin
       # Run php crawler script
       logger.info `cd vendor/FacebookCrawler; php crawler.php; cd ..`
