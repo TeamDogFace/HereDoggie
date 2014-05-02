@@ -11,8 +11,9 @@
         <div class="panel-body">
           <%= image_tag @search.photo.url(:thumb), class: "img-responsive img-rounded", id: "img-preview" %><br>
           <p><strong>
-            Date Lost: <%= @search.date_lost.strftime('%m/%d/%Y') %>
-            Number of Results: <%= @search.num_results%>
+            Date Lost: <%= @search.date_lost.strftime('%m/%d/%Y') %></br>
+            Number of Results: <%= @search.num_results%></br>
+            Status: <%= @search.status %>
           </strong></p>
           <%= link_to 'Refresh', search_path(@search), class: "btn btn-primary btn-sm", role: "button" %>
           <%= link_to 'New Search', new_search_path, class: "btn btn-info btn-sm", role: "button" %>
