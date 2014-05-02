@@ -12,6 +12,13 @@ class Search < ActiveRecord::Base
 	validates_attachment_presence :photo
 	validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
 
+	after_commit :recognize, :on => :create
+
+	def recognize
+		# Run async
+		FacialRecognitionWorker.perform_async(self.email)
+	end
+
 	def predictions
 		Prediction.where("search_id = #{id}")
 	end
