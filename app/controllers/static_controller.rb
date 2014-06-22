@@ -4,4 +4,7 @@ class StaticController < ApplicationController
 
   def faq
   end
+
+  def landing
+  end
 end
