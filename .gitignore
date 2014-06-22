@@ -29,3 +29,6 @@
 
 # If the DogFacialRecognition is in vendor don't commit it
 /vendor/DogFaceRecognizer
+
+# Ignore Vim .swp files
+*.swp
