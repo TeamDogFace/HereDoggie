@@ -32,3 +32,6 @@
 
 # Ignore Vim .swp files
 *.swp
+
+# Ignore samples dir
+/public/system/samples
