@@ -1,2 +1,13 @@
-This will become the new landing page with options for Searching or Posting<br/>
-Also will change the routing so this is the root
+<div class="jumbotron">
+  <h1>Here Doggie</h1>
+  <h3>Search or help someone else find their canine companion.</h3>
+  <div class="landing_buttons">
+    <button type="button" class="btn btn-primary btn-get-search">Search</button>
+    <button type="button" class="btn btn-primary btn-post">Post</button>
+  </div>
+</div>
+
+<script>
+  var path = "<%= asset_path('bg.jpg') %>";
+  $.backstretch(path);
+</script>
