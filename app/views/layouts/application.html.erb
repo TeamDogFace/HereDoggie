@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DogeFinder</title>
+  <title>Here Doggie</title>
   <!-- Latest compiled and minified Bootstrap CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -22,13 +22,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><%= image_tag("doge.png", class: "logo")%>DogeFinder</a>
+          <%= link_to(image_tag("doge.png", class: "logo"), root_path, class: "navbar-brand") %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Search</a></li>
-            <li><a href="/static/about">About</a></li>
-            <li><a href="/static/faq">FAQ</a></li>
+            <li class="<%= 'active' if current_page?(new_search_path) %>"><%= link_to "Search", new_search_path %> 
+            <li class="<%= 'active' if false %>"><%= link_to "Post", root_path%> 
+            <li class="<%= 'active' if current_page?(static_about_path) %>"><%= link_to "About", static_about_path %>
+            <li class="<%= 'active' if current_page?(static_faq_path) %>"><%= link_to "FAQ", static_faq_path %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<li><a href="#">Login/Register</a></li>
