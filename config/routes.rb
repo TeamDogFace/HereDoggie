@@ -6,7 +6,7 @@ HereDoggie::Application.routes.draw do
   get "static/landing"
   resources :searches
 
-  root 'searches#new'
+  root 'static#landing'
 
   mount Sidekiq::Web, at: "/sidekiq"
 
