@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502143712) do
+ActiveRecord::Schema.define(version: 20140705031859) do
 
   create_table "facebook_urls", force: true do |t|
     t.string   "url"
@@ -46,6 +46,13 @@ ActiveRecord::Schema.define(version: 20140502143712) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
