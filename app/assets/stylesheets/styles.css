@@ -52,3 +52,9 @@ p, ol, ul, td {
 a.btn:visited{
 	color: #fff
 }
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+

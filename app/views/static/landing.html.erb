@@ -2,8 +2,8 @@
   <h1>Here Doggie</h1>
   <h3>Search or help someone else find their canine companion.</h3>
   <div class="landing_buttons">
-    <button type="button" class="btn btn-primary btn-get-search">Search</button>
-    <button type="button" class="btn btn-primary btn-post">Post</button>
+    <%= link_to "Search", new_search_path, :class => 'btn btn-primary btn-search' %>
+    <%= link_to "Post", root_path, :class => 'btn btn-primary btn-post' %>
   </div>
 </div>
 
