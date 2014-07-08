@@ -32,7 +32,13 @@
             <li class="<%= 'active' if current_page?(static_faq_path) %>"><%= link_to "FAQ", static_faq_path %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'Login/Register', new_user_path %></li>
+            <li>
+              <% if current_user %>
+                Hello, <%= current_user.email %>, <%= link_to 'Logout', logout_path %>
+              <% else %>
+                <%= link_to 'Login/Register', new_user_path %>
+              <% end %>
+            </li>
           </ul>
         </div>
       </div>
