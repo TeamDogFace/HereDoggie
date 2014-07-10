@@ -28,8 +28,8 @@
           <ul class="nav navbar-nav">
             <li class="<%= 'active' if current_page?(new_search_path) %>"><%= link_to "Search", new_search_path %> 
             <li class="<%= 'active' if false %>"><%= link_to "Post", root_path%> 
-            <li class="<%= 'active' if current_page?(static_about_path) %>"><%= link_to "About", static_about_path %>
-            <li class="<%= 'active' if current_page?(static_faq_path) %>"><%= link_to "FAQ", static_faq_path %>
+            <li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %>
+            <li class="<%= 'active' if current_page?(faq_path) %>"><%= link_to "FAQ", faq_path %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
