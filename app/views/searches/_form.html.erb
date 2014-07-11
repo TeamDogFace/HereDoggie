@@ -47,6 +47,12 @@
           <%= f.number_field :num_results, class: "form-control", placeholder: "Number of results" %>
         </div>
         <p>This section is for searching Facebook. If you know of any Facebook groups that post photos of lost dogs, you can add them here. Just paste the URL of the group's page. For example, just paste 'https://www.facebook.com/erieanimalnetwork' into a box to search Erie Animal Network. Click the '+' button to add more.</p>
+        <!-- nested resource -->
+        <%= f.fields_for :facebook_urls do |builder| %>
+          <%= render "facebook_url_fields", f: builder %>
+        <% end %>
+
+<!--
         <div id="fb-fields">
           <div class="field input-group" id="fb_1">
             <input type="text" class="form-control fb_url" id="search_facebook_url_string_1" name="search[facebook_url_string_1]" placeholder="Facebook URL" />
@@ -56,6 +62,7 @@
             <input type="text" class="form-control" id="facebook_url_string" name="search[facebook_url_string]" />
           </div>
         </div>
+        -->
           <!--<%= f.text_field :facebook_url_string, class: "form-control" %>-->
           <button class="btn btn-primary" id="crawl">Next</button>
       </div>

@@ -33,6 +33,9 @@ http://jsfiddle.net/jaredwilli/tZPg4/4/
 */
 
 	//this section is for adding additional FB fields
+
+  // This is the old hacky way
+  /*
 	var fb_div = $('#fb-fields');
 	var i = $('#fb-fields .field').length+1;
 
@@ -56,6 +59,7 @@ http://jsfiddle.net/jaredwilli/tZPg4/4/
     		i--;
     	}
 	});
+  */
 
 	//this is the 'get started' button's onClick method
 	$('.btn-get-started').click(function(e){

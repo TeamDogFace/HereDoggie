@@ -6,6 +6,8 @@ class Search < ActiveRecord::Base
 		path: "public/system/:class/:id/:style/:filename",
 		url: "/system/:class/:id/:style/:filename"
 
+  accepts_nested_attributes_for :facebook_urls, reject_if: proc { |a| a[:url].blank? }
+
 	validates :date_lost, :num_results, :email, presence: true
 	validates :num_results, numericality: { greater_than: 0, less_than_or_equal_to: 1000 }
 	validates_format_of :email, with: /@/
